@@ -1,0 +1,43 @@
+﻿@model IEnumerable<UserModel>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered text-center border border-1 border-dark">
+    <tr class="border border-3 border-dark">
+        <th class="text-dark">
+            Name
+        </th>
+        <th class="text-dark">
+           Email
+        </th>
+        <th class="text-dark">
+            Age
+        </th>
+        <th class="text-dark">
+            Action
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr class="border border-3 border-dark">
+            <td class="text-dark">
+                @item.Name
+            </td>
+            <td class="text-dark">
+                @item.Email
+            </td>
+            <td class="text-dark">
+                @item.Age
+            </td>
+            <td> 
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,22 @@
+﻿@model UserModel
+@{
+    ViewBag.Title = "Create";
+}
+<h2>Create</h2>
+
+<form method="post" asp-action="Create" asp-controller="User">
+    User Name:<br>
+    <input type="text" asp-for="Name">
+    <br>
+    Email Id:<br>
+    <input type="text" asp-for="Email">
+    <br>
+    Age:<br>
+    <input type="number" asp-for="Age">
+    <br><br>
+    <input type="submit" value="Create" />
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

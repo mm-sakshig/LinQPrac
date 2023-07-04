@@ -1,0 +1,22 @@
+﻿@model UserModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<fieldset>
+    <h2>Details</h2>
+    <div>
+        @Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)
+    </div>
+  
+    <div>
+        @Html.DisplayNameFor(model => model.Email) : @Html.DisplayFor(model => model.Email)
+    </div>
+    <div>
+        @Html.DisplayNameFor(model => model.Age) :  @Html.DisplayFor(model => model.Age)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

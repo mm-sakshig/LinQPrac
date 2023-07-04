@@ -1,0 +1,22 @@
+﻿@model UserModel
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>Edit</h2>
+<form method="post" asp-action="Edit" asp-controller="User">
+    <input asp-for="Id" hidden />
+
+    User Name:<br>
+    <input type="text" asp-for="Name">
+    <br>
+    Email Id:<br>
+    <input type="text" asp-for="Email">
+    <br>
+    Age:<br>
+    <input type="number" asp-for="Age">
+    <br><br>
+    <input type="submit" value="Edit" />
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
